@@ -1,0 +1,23 @@
+{
+  "name": "svelte-base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "build-min": "rollup -c rollup.config.min.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^2.21.0",
+    "svelte": "^3.24.0"
+  },
+  "dependencies": {
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-svelte": "^5.2.3",
+    "rollup-plugin-terser": "^6.1.0",
+    "svelte-doric": "^0.2.0-alpha.2"
+  }
+}

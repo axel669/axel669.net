@@ -1,0 +1,9 @@
+{
+    "liveServer.settings.NoBrowser": true,
+    "liveServer.settings.port": 1338,
+    "liveServer.settings.host": "0.0.0.0",
+    "liveServer.settings.ignoreFiles": [
+        "**/*"
+    ],
+    "liveServer.settings.root": "/output"
+}

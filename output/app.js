@@ -2906,7 +2906,7 @@
     	append(document.head, style);
     }
 
-    // (80:12) <AppBar>
+    // (82:12) <AppBar>
     function create_default_slot_1$1(ctx) {
     	let app_title;
     	let avatar;
@@ -2947,7 +2947,7 @@
     	};
     }
 
-    // (79:8) <Card>
+    // (81:8) <Card>
     function create_default_slot$1(ctx) {
     	let appbar;
     	let t;
@@ -3091,8 +3091,10 @@
 
     	const projects = [
     		["https://github.com/axel669/svelte-doric", "Svelte Doric"],
-    		["https://github.com/axel669/AxelQL", "AxelQL"],
-    		["https://github.com/axel669/norn", "Norn"]
+    		["https://github.com/axel669/axel-query", "Axel Query"],
+    		["https://github.com/axel669/norn", "Norn"],
+    		["#", "Kingsport (Coming Soon)"],
+    		["#", "Ratatoskr (Coming Soon)"]
     	];
 
     	return [socials, projects];

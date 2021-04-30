@@ -24,8 +24,10 @@
 
     const projects = [
         ["https://github.com/axel669/svelte-doric", "Svelte Doric"],
-        ["https://github.com/axel669/AxelQL", "AxelQL"],
+        ["https://github.com/axel669/axel-query", "Axel Query"],
         ["https://github.com/axel669/norn", "Norn"],
+        ["#", "Kingsport (Coming Soon)"],
+        ["#", "Ratatoskr (Coming Soon)"]
     ]
 ;</script>
 

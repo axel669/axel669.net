@@ -3,43 +3,22 @@
 </svelte:head>
 
 <script>
-    import {
-        AppTheme,
-        Baseline as baseline,
+    import AppStyle from "svelte-doric/core/app-style.svelte"
+    import baseline from "svelte-doric/core/baseline.svelte"
 
-        AppBar,
-        Avatar,
-        Card,
-    } from "svelte-doric"
+    import Avatar from "svelte-doric/core/avatar.svelte"
+    import Card from "svelte-doric/core/card.svelte"
+    import TitleBar from "svelte-doric/core/title-bar.svelte"
 
     import theme from "./theme.svelte"
     import Links from "./links.svelte"
 
-    const socials = [
-        ["https://github.com/axel669", "Github"],
-        ["https://www.twitch.tv/axel669", "Twitch"],
-        ["https://twitter.com/Axel669", "Twitter"],
-        ["https://www.linkedin.com/pub/chris-morgan/82/870/264", "LinkedIn"]
-    ]
+    import projectLinks from "./project-links.js"
+</script>
 
-    const projects = [
-        ["https://github.com/axel669/svelte-doric", "Svelte Doric"],
-        ["https://github.com/axel669/axel-query", "Axel Query"],
-        ["https://github.com/axel669/norn", "Norn"],
-        ["#", "Kingsport (Coming Soon)"],
-        ["#", "Ratatoskr (Coming Soon)"]
-    ]
-;</script>
-
-<AppTheme {baseline} {theme} />
+<AppStyle {baseline} {theme} />
 
 <style>
-    :global(body, html) {
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        overflow: hidden;
-    }
     :global(body::before) {
         position: fixed;
         top: 0px;
@@ -67,25 +46,31 @@
     content-wrapper {
         width: 100%;
         max-width: 320px;
+        padding: 4px;
 
         display: grid;
     }
 
     app-title {
+        display: flex;
         justify-content: center;
+        align-items: center;
+        grid-area: title;
+        font-weight: 700;
+        font-size: 18px;
     }
 </style>
 
 <mobile-test>
     <content-wrapper>
         <Card>
-            <AppBar>
+            <TitleBar>
                 <app-title>
                     <Avatar image="./images/megaman-rounded.png" />
                     &nbsp;Axel669
                 </app-title>
-            </AppBar>
-            <Links {socials} {projects} />
+            </TitleBar>
+            <Links links={projectLinks} />
         </Card>
     </content-wrapper>
 </mobile-test>

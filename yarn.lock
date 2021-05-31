@@ -269,10 +269,10 @@ supports-color@^7.0.0:
   dependencies:
     has-flag "^4.0.0"
 
-svelte-doric@^0.2.0-alpha.2:
-  version "0.2.0-alpha.2"
-  resolved "https://registry.yarnpkg.com/svelte-doric/-/svelte-doric-0.2.0-alpha.2.tgz#4ecd0b0b1231c4778d856df19dbe6fc5d352d9e6"
-  integrity sha512-TKlom5tGsOhZ1KA75yCPISqkDnO50LjAVvS47g11cuI47iMWh4h/gZ/b5/disSmzjn18hjoK1+wnFW2hA5q7KA==
+svelte-doric@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/svelte-doric/-/svelte-doric-1.1.1.tgz#a2370226bd77b1b6ad444ce7718426705315e387"
+  integrity sha512-SANvef8fp6JeFNrHy5IRH011HDZgaXm237QPKa686n0rQ3WL2nMc1o6CFhNVXzjtenyu1k1yaDA0DexWy+gVJw==
 
 svelte@^3.24.0:
   version "3.25.0"

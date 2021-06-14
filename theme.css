@@ -1,0 +1,117 @@
+@font-face {
+    font-family: "Megaman";
+    src: url(./font/megaman2.woff) format("woff");
+}
+@font-face {
+    font-family: "KingdomHearts";
+    src: url(./font/kh.ttf) format("truetype");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #030303;
+    color: #ffffff;
+    font-family: Megaman;
+
+    --primary: #00aaff;
+}
+
+body::before {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    content: "";
+
+    /* source: https://www.teahub.io/viewwp/iTTxh_night-pixel-city-background/ */
+    background-image: url(images/bg/city-wallpaper.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+fieldset {
+    border: 3px solid var(--primary);
+    border-radius: 4px;
+    background-color: #000000a4;
+}
+body > fieldset {
+    position: relative;
+    max-width: 480px;
+    margin: auto;
+
+    animation-name: main-screen-turn-on;
+    animation-duration: 750ms;
+    animation-iteration-count: 1;
+}
+body > fieldset::before {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    content: "";
+
+    background-image: url(images/bg/axel-minimalist.png);
+    background-position: 85% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.35;
+    z-index: -1;
+}
+
+fieldset a {
+    display: block;
+    text-decoration: none;
+    padding: 8px;
+}
+fieldset a, fieldset a:hover, fieldset a:active, fieldset a:visited {
+    color: white;
+}
+
+title-text {
+    display: block;
+    font-family: KingdomHearts;
+
+    border-top: 1px solid var(--primary);
+    border-bottom: 1px solid var(--primary);
+    font-size: 48px;
+    margin-bottom: 12px;
+    padding: 4px;
+    text-align: center;
+}
+
+avatar-icon {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background-image: url(images/megaman-rounded.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+@keyframes main-screen-turn-on {
+    0% {
+        transform: scaleX(5%) scaleY(5%);
+    }
+    50% {
+        transform: scaleX(100%) scaleY(5%);
+    }
+    100% {
+        transform: scaleX(100%) scaleY(100%);
+    }
+}

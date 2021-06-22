@@ -82,6 +82,10 @@ fieldset a, fieldset a:hover, fieldset a:active, fieldset a:visited {
     color: white;
 }
 
+fieldset > fieldset {
+    margin-top: 8px;
+}
+
 title-text {
     display: block;
     font-family: KingdomHearts;

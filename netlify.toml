@@ -3,3 +3,6 @@
     to = "https://axel669.net"
     status = 301
     force = true
+
+[build.environments]
+    NODE_VERSION = "16"

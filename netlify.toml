@@ -1,8 +1,0 @@
-[[redirects]]
-    from = "https://mystifying-einstein-f9eb68.netlify.app/"
-    to = "https://axel669.net"
-    status = 301
-    force = true
-
-[build.environment]
-    NODE_VERSION = "16"

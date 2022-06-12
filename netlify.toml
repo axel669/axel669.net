@@ -4,5 +4,5 @@
     status = 301
     force = true
 
-[build.environments]
+[build.environment]
     NODE_VERSION = "16"

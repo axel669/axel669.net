@@ -1,0 +1,23 @@
+{
+  "name": "axel669.net",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-dev": "heph config.mjs dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axel669/axel669.net.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/axel669/axel669.net/issues"
+  },
+  "homepage": "https://github.com/axel669/axel669.net#readme",
+  "dependencies": {
+    "@axel669/hephaestus": "^0.1.1",
+    "svelte-doric": "^1.5.4"
+  }
+}

@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Axel669</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width" />
+        <link rel="icon" type="image/png" href="./images/megaman-rounded.png" />
+    </head>
+    <body ws-x="theme[tron] @app
+    bg-img[url(./images/bg/hex-static.svg)]"
+    style="--font: Megaman;">
+        <script src="https://cdn.jsdelivr.net/npm/@axel669/windstorm@0.1.8/dist/browser.js"></script>
+        <style>
+            @font-face {
+                font-family: "Megaman";
+                src: url(./font/megaman2.woff) format("woff");
+            }
+
+            axel-stars {
+                box-shadow: var(--box);
+                animation-name: fly;
+                animation-duration: var(--time);
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+            axel-stars::after {
+                content: "";
+                box-shadow: var(--box);
+                position: absolute;
+                left: 2000px;
+            }
+
+            @keyframes fly {
+                from {
+                    transform: translateX(0px)
+                }
+                to {
+                    transform: translateX(-2000px)
+                }
+            }
+        </style>
+        <script>
+            const rand = (n) => Math.floor(
+                Math.random() * n
+            )
+            const stars = (size, n) => Array.from(
+                { length: n },
+                () => `${rand(2000)}px ${rand(500)}px 0px ${size}px white`
+            )
+
+            const starStyle = document.createElement("style")
+            document.body.appendChild(starStyle)
+
+            const sheet = starStyle.sheet
+            sheet.insertRule(
+                `body { --box-1: ${stars(1, 300).join(", ")}; }`,
+                0
+            )
+            sheet.insertRule(
+                `body { --box-2: ${stars(2, 100).join(", ")}; }`,
+                1
+            )
+            sheet.insertRule(
+                `body { --box-3: ${stars(3, 50).join(", ")}; }`,
+                2
+            )
+        </script>
+        <ws-screen style="--screen-width: 330px;">
+            <ws-flex ws-x="fl-m-a[center] fl-cr-a[stretch]">
+                <axel-stripes
+                ws-x="pos[fixed] inset-x[-10px] y[50%]
+                tr[translateY(-50%)] h[500px] z[-1]
+                bg[black] bd[2px_solid_teal]">
+                    <axel-stars ws-x="pos[absolute] x[0] y[0] w[1px] h[1px]"
+                    style="--box: var(--box-1); --time: 40s"></axel-stars>
+                    <axel-stars ws-x="pos[absolute] x[0] y[0] w[1px] h[1px]"
+                    style="--box: var(--box-2); --time: 60s"></axel-stars>
+                    <axel-stars ws-x="pos[absolute] x[0] y[0] w[1px] h[1px]"
+                    style="--box: var(--box-3); --time: 80s"></axel-stars>
+                </axel-stripes>
+                <ws-paper ws-x="@outline h[480px]">
+                    <ws-titlebar ws-x="slot[header] @fill $color[primary]">
+                        <span ws-x="slot[title]">
+                            <span ws-x="$title flex[row] fl-cr-a[center] gap[4px]">
+                                <ws-avatar>
+                                    <img src="./images/megaman-rounded.png" />
+                                </ws-avatar>
+                                Axel669
+                            </span>
+                        </span>
+                    </ws-titlebar>
+                    <ws-flex slot="content" ws-x="over[auto]">
+                        <ws-paper ws-x="@outline">
+                            <ws-titlebar ws-x="slot[header]">
+                                <span ws-x="slot[title] $title t-c[&secondary]">
+                                    About Me
+                                </span>
+                            </ws-titlebar>
+                            <ws-flex ws-x="slot[content]">
+                                <div>
+                                    Creator of JS libraries, development tools,
+                                    and web apps for a variety of uses.
+                                </div>
+                            </ws-flex>
+                        </ws-paper>
+
+                        <ws-paper ws-x="@outline">
+                            <ws-titlebar ws-x="slot[header]">
+                                <span ws-x="slot[title] $title t-c[&secondary]">
+                                    Projects & Libraries
+                                </span>
+                            </ws-titlebar>
+                            <ws-flex ws-x="slot[content]">
+                                <a href="https://github.com/axel669/lib.asuid"
+                                target="_blank" ws-x="@button @flat fl-m-a[start]
+                                hover:t-c[&primary]">
+                                    <ws-icon class="ti-arrow-big-right-filled">
+                                        ASUID
+                                    </ws-icon>
+                                </a>
+                                <a href="https://github.com/axel669/lib.windstorm"
+                                target="_blank" ws-x="@button @flat fl-m-a[start]
+                                hover:t-c[&primary]">
+                                    <ws-icon class="ti-arrow-big-right-filled">
+                                        Windstorm
+                                    </ws-icon>
+                                </a>
+                                <a href="https://github.com/axel669/joker"
+                                target="_blank" ws-x="@button @flat fl-m-a[start]
+                                hover:t-c[&primary]">
+                                    <ws-icon class="ti-arrow-big-right-filled">
+                                        Joker
+                                    </ws-icon>
+                                </a>
+                                <a href="https://github.com/axel669/aegis"
+                                target="_blank" ws-x="@button @flat fl-m-a[start]
+                                hover:t-c[&primary]">
+                                    <ws-icon class="ti-arrow-big-right-filled">
+                                        Aegis
+                                    </ws-icon>
+                                </a>
+                                <a href="https://github.com/axel669/lib.svelte-wind"
+                                target="_blank" ws-x="@button @flat fl-m-a[start]
+                                hover:t-c[&primary]">
+                                    <ws-icon class="ti-arrow-big-right-filled">
+                                        Svelte-Wind
+                                    </ws-icon>
+                                </a>
+                                <a href="https://github.com/axel669/lib.ipsen"
+                                target="_blank" ws-x="@button @flat fl-m-a[start]
+                                hover:t-c[&primary]">
+                                    <ws-icon class="ti-arrow-big-right-filled">
+                                        Ipsen
+                                    </ws-icon>
+                                </a>
+                                <a href="https://github.com/axel669/lib.timestring"
+                                target="_blank" ws-x="@button @flat fl-m-a[start]
+                                hover:t-c[&primary]">
+                                    <ws-icon class="ti-arrow-big-right-filled">
+                                        Timestring
+                                    </ws-icon>
+                                </a>
+                            </ws-flex>
+                        </ws-paper>
+                    </ws-flex>
+                    <ws-grid ws-x="slot[footer] gr-col[1fr_1fr_1fr_1fr]">
+                        <a href="https://github.com/axel669" target="_blank"
+                        ws-x="@button $color[primary] @fill t-deco[none]">
+                            <ws-icon class="ti-brand-github"></ws-icon>
+                        </a>
+                        <a href="https://www.twitch.tv/axel669" target="_blank"
+                        ws-x="@button $color[primary] @fill t-deco[none]">
+                            <ws-icon class="ti-brand-twitch"></ws-icon>
+                        </a>
+                        <a href="https://www.linkedin.com/in/chris-morgan-26487082/" target="_blank"
+                        ws-x="@button $color[primary] @fill t-deco[none]">
+                            <ws-icon class="ti-brand-linkedin"></ws-icon>
+                        </a>
+                        <a href="https://twitter.com/Axel669" target="_blank"
+                        ws-x="@button $color[primary] @fill t-deco[none]">
+                            <ws-icon class="ti-brand-twitter"></ws-icon>
+                        </a>
+                    </ws-grid>
+                </ws-paper>
+            </ws-flex>
+        </ws-screen>
+    </body>
+</html>

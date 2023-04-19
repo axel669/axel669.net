@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="240" viewBox="-4 -40 120 240" style="background-color: #04080C">
+    <style>
+        path, polyline {
+            stroke-width: 4px;
+            stroke: teal;
+            fill: none;
+        }
+    </style>
+    <path d="M 60 0 L 0 40 L 0 120 L 60 160 L 120 120 L 120 40 L 60 0 M 60 0 L 60 -40 M 0 40 L -60 0 M 0 120 L -60 160 M 60 160 L 60 200"></path>
+</svg>

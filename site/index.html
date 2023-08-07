@@ -12,9 +12,8 @@
         <meta name="theme-color" content="#00EEEE" />
     </head>
     <body ws-x="theme[tron] @app
-    bg-img[url(./images/bg/hex-static.svg)]"
-    style="--font: Megaman;">
-        <script src="https://cdn.jsdelivr.net/npm/@axel669/windstorm@0.1.8/dist/browser.js"></script>
+    bg-img[url(./images/bg/hex-static.svg)] &font[Megaman]">
+        <script src="https://cdn.jsdelivr.net/npm/@axel669/windstorm@0.1.9/dist/browser.js"></script>
         <style>
             @font-face {
                 font-family: "Megaman";
@@ -70,18 +69,18 @@
                 2
             )
         </script>
-        <ws-screen style="--screen-width: 330px;">
+        <ws-screen ws-x="&screen-width[330px]">
             <ws-flex ws-x="fl-m-a[center] fl-cr-a[stretch]">
                 <axel-stripes
-                ws-x="pos[fixed] inset-x[-10px] y[50%]
+                ws-x="pos[fixed] inset-x[0px] y[50%]
                 tr[translateY(-50%)] h[500px] z[-1]
-                bg[black] bd[2px_solid_teal]">
-                    <axel-stars ws-x="pos[absolute] x[0] y[0] w[1px] h[1px]"
-                    style="--box: var(--box-1); --time: 40s"></axel-stars>
-                    <axel-stars ws-x="pos[absolute] x[0] y[0] w[1px] h[1px]"
-                    style="--box: var(--box-2); --time: 60s"></axel-stars>
-                    <axel-stars ws-x="pos[absolute] x[0] y[0] w[1px] h[1px]"
-                    style="--box: var(--box-3); --time: 80s"></axel-stars>
+                bg[black] b-t[2px_solid_teal] b-b[2px_solid_teal]">
+                    <axel-stars ws-x="pos[absolute] x[0] y[0] w[1px] h[1px]
+                    &box[&box-1] &time[40s]"></axel-stars>
+                    <axel-stars ws-x="pos[absolute] x[0] y[0] w[1px] h[1px]
+                    &box[&box-2] &time[60s]"></axel-stars>
+                    <axel-stars ws-x="pos[absolute] x[0] y[0] w[1px] h[1px]
+                    &box[&box-3] &time[80s]"></axel-stars>
                 </axel-stripes>
                 <ws-paper ws-x="@outline h[480px]">
                     <ws-titlebar ws-x="slot[header] @fill $color[primary]">
@@ -97,7 +96,7 @@
                     <ws-flex slot="content" ws-x="over[auto]">
                         <ws-paper ws-x="@outline">
                             <ws-titlebar ws-x="slot[header]">
-                                <span ws-x="slot[title] $title t-c[&secondary]">
+                                <span ws-x="slot[title] $title c[&secondary]">
                                     About Me
                                 </span>
                             </ws-titlebar>
@@ -111,56 +110,56 @@
 
                         <ws-paper ws-x="@outline">
                             <ws-titlebar ws-x="slot[header]">
-                                <span ws-x="slot[title] $title t-c[&secondary]">
-                                    Projects & Libraries
+                                <span ws-x="slot[title] $title c[&secondary]">
+                                    Projects and Libraries
                                 </span>
                             </ws-titlebar>
                             <ws-flex ws-x="slot[content]">
                                 <a href="https://github.com/axel669/lib.asuid"
                                 target="_blank" ws-x="@button @flat fl-m-a[start]
-                                hover:t-c[&primary]">
+                                hover:c[&primary]">
                                     <ws-icon class="ti-arrow-big-right-filled">
                                         ASUID
                                     </ws-icon>
                                 </a>
                                 <a href="https://github.com/axel669/lib.windstorm"
                                 target="_blank" ws-x="@button @flat fl-m-a[start]
-                                hover:t-c[&primary]">
+                                hover:c[&primary]">
                                     <ws-icon class="ti-arrow-big-right-filled">
                                         Windstorm
                                     </ws-icon>
                                 </a>
+                                <a href="https://github.com/axel669/lib.zephyr"
+                                target="_blank" ws-x="@button @flat fl-m-a[start]
+                                hover:c[&primary]">
+                                    <ws-icon class="ti-arrow-big-right-filled">
+                                        Zephyr
+                                    </ws-icon>
+                                </a>
                                 <a href="https://github.com/axel669/joker"
                                 target="_blank" ws-x="@button @flat fl-m-a[start]
-                                hover:t-c[&primary]">
+                                hover:c[&primary]">
                                     <ws-icon class="ti-arrow-big-right-filled">
                                         Joker
                                     </ws-icon>
                                 </a>
                                 <a href="https://github.com/axel669/aegis"
                                 target="_blank" ws-x="@button @flat fl-m-a[start]
-                                hover:t-c[&primary]">
+                                hover:c[&primary]">
                                     <ws-icon class="ti-arrow-big-right-filled">
                                         Aegis
                                     </ws-icon>
                                 </a>
-                                <a href="https://github.com/axel669/lib.svelte-wind"
-                                target="_blank" ws-x="@button @flat fl-m-a[start]
-                                hover:t-c[&primary]">
-                                    <ws-icon class="ti-arrow-big-right-filled">
-                                        Svelte-Wind
-                                    </ws-icon>
-                                </a>
                                 <a href="https://github.com/axel669/lib.ipsen"
                                 target="_blank" ws-x="@button @flat fl-m-a[start]
-                                hover:t-c[&primary]">
+                                hover:c[&primary]">
                                     <ws-icon class="ti-arrow-big-right-filled">
                                         Ipsen
                                     </ws-icon>
                                 </a>
                                 <a href="https://github.com/axel669/lib.timestring"
                                 target="_blank" ws-x="@button @flat fl-m-a[start]
-                                hover:t-c[&primary]">
+                                hover:c[&primary]">
                                     <ws-icon class="ti-arrow-big-right-filled">
                                         Timestring
                                     </ws-icon>
@@ -168,7 +167,8 @@
                             </ws-flex>
                         </ws-paper>
                     </ws-flex>
-                    <ws-grid ws-x="slot[footer] gr-col[1fr_1fr_1fr_1fr]">
+                    <ws-grid ws-x="slot[footer] gr-col[1fr_1fr_1fr]
+                    b-t[1px_solid_var(--layer-border-color)]">
                         <a href="https://github.com/axel669" target="_blank"
                         ws-x="@button $color[primary] @fill t-deco[none]
                         $compact p[2px]">
@@ -185,14 +185,14 @@
                                 <span ws-x="t-sz[&text-size-data]">twitch</span>
                             </ws-flex>
                         </a>
-                        <a href="https://www.linkedin.com/in/chris-morgan-26487082/" target="_blank"
+                        <!-- <a href="https://www.linkedin.com/in/chris-morgan-26487082/" target="_blank"
                         ws-x="@button $color[primary] @fill t-deco[none]
                         $compact p[2px]">
                             <ws-flex ws-x="p[0px] fl-cr-a[center]">
                                 <ws-icon class="ti-brand-linkedin"></ws-icon>
                                 <span ws-x="t-sz[&text-size-data]">linkedin</span>
                             </ws-flex>
-                        </a>
+                        </a> -->
                         <a href="https://twitter.com/Axel669" target="_blank"
                         ws-x="@button $color[primary] @fill t-deco[none]
                         $compact p[2px]">

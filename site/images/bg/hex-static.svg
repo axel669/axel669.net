@@ -1,10 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="240" viewBox="-4 -40 120 240" style="background-color: #04080C">
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="60" viewBox="-40 0 240 120" style="background-color: #251E23">
     <style>
         path, polyline {
-            stroke-width: 4px;
-            stroke: teal;
+            stroke-width: 6px;
+            stroke: cyan;
             fill: none;
         }
     </style>
-    <path d="M 60 0 L 0 40 L 0 120 L 60 160 L 120 120 L 120 40 L 60 0 M 60 0 L 60 -40 M 0 40 L -60 0 M 0 120 L -60 160 M 60 160 L 60 200"></path>
+    <!-- <path d="M 60 0 L 0 40 L 0 120 L 60 160 L 120 120 L 120 40 L 60 0 M 60 0 L 60 -40 M 0 40 L -60 0 M 0 120 L -60 160 M 60 160 L 60 200"></path> -->
+    <path d="M 0 60 L 40 0 L 120 0 L 160 60 L 120 120 L 40 120 L 0 60 M 0 60 L -40 60 M 40 0 L 0 -60 M 120 0 L 160 -60 M 160 60 L 200 60"></path>
 </svg>

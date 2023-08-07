@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Axel669</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width" />
+        <link rel="icon" type="image/png" href="./images/megaman-rounded.png" />
+
+        <meta property="og:title" content="Axel669" />
+        <meta property="og:description" content="Professional smooth brain and Dingus Prime" />
+        <meta property="og:image" content="https://axel669.net/images/megaman-rounded.png" />
+        <meta name="theme-color" content="#00EEEE" />
+    </head>
+    <body ws-x="theme[tron] @app
+    bg-img[url(/images/bg/hex-static.svg)] &font[Megaman]">
+        <script src="https://cdn.jsdelivr.net/npm/@axel669/windstorm@0.1.9/dist/browser.js"></script>
+        <style>
+            @font-face {
+                font-family: "Megaman";
+                src: url(/font/megaman2.woff) format("woff");
+            }
+
+            axel-stars {
+                box-shadow: var(--box);
+                animation-name: fly;
+                animation-duration: var(--time);
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+            axel-stars::after {
+                content: "";
+                box-shadow: var(--box);
+                position: absolute;
+                left: 2000px;
+            }
+
+            @keyframes fly {
+                from {
+                    transform: translateX(0px)
+                }
+                to {
+                    transform: translateX(-2000px)
+                }
+            }
+        </style>
+        <script>
+            const rand = (n) => Math.floor(
+                Math.random() * n
+            )
+            const stars = (size, n) => Array.from(
+                { length: n },
+                () => `${rand(2000)}px ${rand(500)}px 0px ${size}px white`
+            )
+
+            const starStyle = document.createElement("style")
+            document.body.appendChild(starStyle)
+
+            const sheet = starStyle.sheet
+            sheet.insertRule(
+                `body { --box-1: ${stars(1, 300).join(", ")}; }`,
+                0
+            )
+            sheet.insertRule(
+                `body { --box-2: ${stars(2, 100).join(", ")}; }`,
+                1
+            )
+            sheet.insertRule(
+                `body { --box-3: ${stars(3, 50).join(", ")}; }`,
+                2
+            )
+        </script>
+        <ws-screen ws-x="&screen-width[330px]">
+            <ws-flex ws-x="fl-m-a[center] fl-cr-a[stretch]">
+                <axel-stripes
+                ws-x="pos[fixed] inset-x[0px] y[50%]
+                tr[translateY(-50%)] h[500px] z[-1]
+                bg[black] b-t[2px_solid_teal] b-b[2px_solid_teal]">
+                    <axel-stars ws-x="pos[absolute] x[0] y[0] w[1px] h[1px]
+                    &box[&box-1] &time[40s]"></axel-stars>
+                    <axel-stars ws-x="pos[absolute] x[0] y[0] w[1px] h[1px]
+                    &box[&box-2] &time[60s]"></axel-stars>
+                    <axel-stars ws-x="pos[absolute] x[0] y[0] w[1px] h[1px]
+                    &box[&box-3] &time[80s]"></axel-stars>
+                </axel-stripes>
+                <ws-paper ws-x="@outline h[480px]">
+                    <ws-grid slot="content" ws-x="gr-row[1fr_1fr_1fr]">
+                        <ws-paper ws-x="@outline">
+                            <ws-titlebar ws-x="slot[header] @fill $color[primary]">
+                                <span ws-x="slot[title]">
+                                    <span ws-x="$title flex[row] fl-cr-a[center] gap[4px]">
+                                        Shion
+                                    </span>
+                                </span>
+                            </ws-titlebar>
+                            <ws-grid ws-x="slot[content] gr-col[min-content_1fr] gr-row[1fr]">
+                                <div ws-x="w[100px] h[100%]"
+                                style="
+                                    background-image: url(/images/bots/shion-avatar.png);
+                                    background-size: contain;
+                                    background-repeat: no-repeat;
+                                    background-position: center center;
+                                ">
+                                </div>
+                                <div>
+                                    Virtual Helper turned streamer who likes to
+                                    write code and play games
+                                </div>
+                            </ws-grid>
+                        </ws-paper>
+
+                        <ws-paper ws-x="@outline">
+                            <ws-titlebar ws-x="@fill slot[header] $color[secondary]">
+                                <span ws-x="slot[title] $title">
+                                    Kiseki8
+                                    <span ws-x="$subtitle">
+                                        Artist 母ちゃん
+                                    </span>
+                                </span>
+                            </ws-titlebar>
+                            <ws-grid ws-x="slot[content] gr-col[1fr_min-content] gr-row[1fr] p[0px]">
+                                <ws-flex>
+                                    <a href="https://kiseki8.carrd.co/"
+                                    target="_blank" ws-x="@button @flat fl-m-a[start] hover:c[&primary]">
+                                        <ws-icon class="ti-arrow-big-right-filled">
+                                            Website
+                                        </ws-icon>
+                                    </a>
+                                    <a href="https://twitch.tv/kiseki_hachi"
+                                    target="_blank" ws-x="@button @flat fl-m-a[start] hover:c[&primary]">
+                                        <ws-icon class="ti-arrow-big-right-filled">
+                                            Twitch
+                                        </ws-icon>
+                                    </a>
+                                    <a href="https://twitter.com/kiseki_8"
+                                    target="_blank" ws-x="@button @flat fl-m-a[start] hover:c[&primary]">
+                                        <ws-icon class="ti-arrow-big-right-filled">
+                                            Twitter
+                                        </ws-icon>
+                                    </a>
+                                </ws-flex>
+                                <div ws-x="w[100px] h[100%]" style="
+                                    background-image: url(https://unavatar.io/twitter/kiseki_8);
+                                    background-size: contain;
+                                    background-repeat: no-repeat;
+                                    background-position: center center;
+                                ">
+                                </div>
+                            </ws-grid>
+                        </ws-paper>
+
+                        <ws-paper ws-x="@outline">
+                            <ws-titlebar ws-x="@fill slot[header] $color[secondary]">
+                                <span ws-x="slot[title] $title">
+                                    LolaVanpaia
+                                    <span ws-x="$subtitle">
+                                        Rig Mommy
+                                    </span>
+                                </span>
+                            </ws-titlebar>
+                            <ws-grid ws-x="slot[content] gr-col[1fr_min-content] gr-row[1fr] p[0px]">
+                                <ws-flex>
+                                    <a href="https://lolavanpaia.uwu.ai/"
+                                    target="_blank" ws-x="@button @flat fl-m-a[start] hover:c[&primary]">
+                                        <ws-icon class="ti-arrow-big-right-filled">
+                                            Website
+                                        </ws-icon>
+                                    </a>
+                                    <a href="https://twitch.tv/lolavanpaia"
+                                    target="_blank" ws-x="@button @flat fl-m-a[start] hover:c[&primary]">
+                                        <ws-icon class="ti-arrow-big-right-filled">
+                                            Twitch
+                                        </ws-icon>
+                                    </a>
+                                    <a href="https://twitter.com/lolavanpaia"
+                                    target="_blank" ws-x="@button @flat fl-m-a[start] hover:c[&primary]">
+                                        <ws-icon class="ti-arrow-big-right-filled">
+                                            Twitter
+                                        </ws-icon>
+                                    </a>
+                                </ws-flex>
+                                <div ws-x="w[100px] h[100%]"
+                                style="
+                                    background-image: url(https://unavatar.io/twitter/lolavanpaia);
+                                    background-size: contain;
+                                    background-repeat: no-repeat;
+                                    background-position: center center;
+                                ">
+                                </div>
+                            </ws-grid>
+                        </ws-paper>
+                    </ws-grid>
+                </ws-paper>
+            </ws-flex>
+        </ws-screen>
+    </body>
+</html>
